@@ -9,7 +9,7 @@ type RootLayoutProps = PropsWithChildren
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang='en' className={inter.variable}>
       <body>{children}</body>
     </html>
   )
