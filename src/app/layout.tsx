@@ -1,18 +1,18 @@
+import { PropsWithChildren } from 'react'
+import { Inter } from '@next/font/google'
+
 import './globals.css'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+
+type RootLayoutProps = PropsWithChildren
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+    <html lang="en" className={inter.variable}>
       <body>{children}</body>
     </html>
   )
 }
+
+export default RootLayout
