@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import { Header } from './components/Header'
 
 const HomePage = () => {
   return (
-    <main className='flex h-screen'>
-      <Image src='/main-background.jpeg' alt='main-image' width={512} height={256} className='m-auto' />
+    <main className='h-screen'>
+      <Header />
     </main>
   )
 }
