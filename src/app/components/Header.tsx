@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const PHONE = '(+34) 649 349 953'
+const PHONE = '+34 649 349 953'
 const EMAIL = 'info@tuperitomedico.com'
 
 export const Header = () => {
