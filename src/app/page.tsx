@@ -1,9 +1,8 @@
 import Image from 'next/image'
 
-import { EMAIL } from '@/utils/constants'
-
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import ContactForm from './components/ContactForm'
 
 const HomePage = () => {
   return (
@@ -83,18 +82,7 @@ const HomePage = () => {
             Introduzca sus datos y envíenos un mensaje para preguntar e informarse al respecto de nuestros servicios
           </p>
         </div>
-        <form
-          action={`mailto:${EMAIL}`}
-          method='POST'
-          encType='multipart/form-data'
-          name='email-form'
-          className='grid grid-cols-2 gap-4'
-        >
-          <input type='text' required placeholder='Nombre' className='input-bordered input-primary input' />
-          <input type='email' required placeholder='Correo' className='input-bordered input-primary input' />
-          <textarea required className='textarea-bordered textarea-primary textarea col-span-2' placeholder='Mensaje' />
-          <button className='btn-primary btn col-span-2 md:col-span-1'>Enviar</button>
-        </form>
+        <ContactForm />
       </div>
       <Footer />
     </main>
