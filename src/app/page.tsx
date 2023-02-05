@@ -13,7 +13,9 @@ const HomePage = () => {
           <h1 className='text-4xl font-semibold leading-snug text-blue-900 md:text-5xl'>
             Valoración de Daño Corporal y Peritaje Médico
           </h1>
-          <button className='mt-4 rounded bg-blue-900 px-4 py-2 text-white md:mt-12'>Reservar ahora</button>
+          <a href='#contact'>
+            <button className='mt-4 rounded bg-blue-900 px-4 py-2 text-white md:mt-12'>Información</button>
+          </a>
         </div>
       </div>
       <div className='clear-both flex flex-col-reverse gap-8 bg-sky-100 p-10 md:grid md:grid-cols-2 md:gap-16 md:p-20'>
@@ -70,6 +72,19 @@ const HomePage = () => {
             especialización exigida, utilización de material específico, desplazamientos y asistencia a juicio
           </p>
         </div>
+      </div>
+      <div
+        id='contact'
+        className='flex flex-col-reverse gap-8 bg-sky-100 p-10 md:grid md:grid-cols-2 md:gap-16 md:p-20'
+      >
+        <div>
+          <h2 className='text-3xl'>Contacto</h2>
+          <div className='my-4 h-0.5 w-full bg-gray-900 md:w-60' />
+          <p>
+            Introduzca sus datos y envíenos un mensaje para preguntar e informarse al respecto de nuestros servicios
+          </p>
+        </div>
+        <form></form>
       </div>
       <Footer />
     </main>
