@@ -5,11 +5,8 @@ import Image from 'next/image'
 import { useEventListener } from 'usehooks-ts'
 import { IconBrandWhatsapp, IconMail } from '@tabler/icons-react'
 
+import { PHONE, EMAIL, WHATSAPP_LINK } from '@/utils/constants'
 import { cn } from '@/utils/misc'
-
-const PHONE = '+34 649 349 953'
-const EMAIL = 'info@tuperitomedico.com'
-const WHATSAPP_LINK = `https://wa.me/${PHONE.split(' ').join('')}`
 
 export const Header = () => {
   const [shrunk, setShrunk] = useState(false)

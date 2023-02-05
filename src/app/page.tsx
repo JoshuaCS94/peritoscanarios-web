@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { EMAIL } from '@/utils/constants'
+
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 
@@ -14,7 +16,7 @@ const HomePage = () => {
             Valoración de Daño Corporal y Peritaje Médico
           </h1>
           <a href='#contact'>
-            <button className='mt-4 rounded bg-blue-900 px-4 py-2 text-white md:mt-12'>Información</button>
+            <button className='btn-primary btn mt-4 md:mt-12'>Información</button>
           </a>
         </div>
       </div>
@@ -73,10 +75,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div
-        id='contact'
-        className='flex flex-col-reverse gap-8 bg-sky-100 p-10 md:grid md:grid-cols-2 md:gap-16 md:p-20'
-      >
+      <div id='contact' className='flex flex-col gap-8 bg-sky-100 p-10 md:grid md:grid-cols-2 md:gap-16 md:p-20'>
         <div>
           <h2 className='text-3xl'>Contacto</h2>
           <div className='my-4 h-0.5 w-full bg-gray-900 md:w-60' />
@@ -84,7 +83,18 @@ const HomePage = () => {
             Introduzca sus datos y envíenos un mensaje para preguntar e informarse al respecto de nuestros servicios
           </p>
         </div>
-        <form></form>
+        <form
+          action={`mailto:${EMAIL}`}
+          method='POST'
+          encType='multipart/form-data'
+          name='email-form'
+          className='grid grid-cols-2 gap-4'
+        >
+          <input type='text' required placeholder='Nombre' className='input-bordered input-primary input' />
+          <input type='email' required placeholder='Correo' className='input-bordered input-primary input' />
+          <textarea required className='textarea-bordered textarea-primary textarea col-span-2' placeholder='Mensaje' />
+          <button className='btn-primary btn col-span-2 md:col-span-1'>Enviar</button>
+        </form>
       </div>
       <Footer />
     </main>
