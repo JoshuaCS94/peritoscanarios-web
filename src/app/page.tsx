@@ -5,7 +5,7 @@ import { Footer } from './components/Footer'
 
 const HomePage = () => {
   return (
-    <main className='h-screen'>
+    <main className='h-screen pt-44 md:pt-28'>
       <Header />
       <div className='pb-8'>
         <Image src='/background.jpg' alt='background' width={900} height={400} className='md:float-right md:ml-16' />
