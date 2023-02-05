@@ -29,7 +29,7 @@ const HomePage = () => {
           className='w-full shrink-0 border-2'
         ></iframe>
         <div className='flex flex-col justify-center gap-2'>
-          <h2 className='text-3xl font-semibold'>Tu Perito Médico</h2>
+          <h2 className='text-3xl font-semibold'>Quiénes somos</h2>
           <div className='my-4 h-0.5 w-full bg-gray-900 md:w-60' />
           <p className='text-justify'>
             Gabinete médico dirigido por la <strong>Dra. Masiel Navarro Pérez</strong> (Col. 383807844), Licenciada en
@@ -52,7 +52,7 @@ const HomePage = () => {
         <div>
           <h2 className='text-3xl'>Servicios</h2>
           <div className='my-4 h-0.5 w-full bg-gray-900 md:w-60' />
-          <ul>
+          <ul className='list-inside list-disc'>
             <li>Consulta médica</li>
             <li>Elaboración de informes de aptitud</li>
             <li>Accidentes (tráfico, vía pública, laboral o común)</li>
